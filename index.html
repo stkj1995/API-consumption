@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Explorer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="page-header">
+        <h1 class="page-title">&#127909; Movie Explorer</h1>
+        <!-- &#127909; = 🎬 -->
+    </header>
+
+    <main class="page-content">
+        <section class="movie-section" aria-labelledby="now-playing-title">
+            <h2 id="now-playing-title" class="section-title">Now Playing &mdash; Latest in Cinemas</h2>
+            <!-- &mdash; = long dash -->
+            <div id="now-playing" class="movie-grid"></div>
+        </section>
+
+        <section class="movie-section" aria-labelledby="popular-title">
+            <h2 id="popular-title" class="section-title">Popular &ndash; Fan Favorites</h2>
+            <!-- &ndash; = short dash -->
+            <div id="popular" class="movie-grid"></div>
+        </section>
+
+        <section class="movie-section" aria-labelledby="top-rated-title">
+            <h2 id="top-rated-title" class="section-title">Top Rated &starf; All-Time Greats</h2>
+            <!-- &starf; = ★ -->
+            <div id="top-rated" class="movie-grid"></div>
+        </section>
+
+        <section class="movie-section" aria-labelledby="upcoming-title">
+            <h2 id="upcoming-title" class="section-title">Upcoming &rarr; Coming Soon</h2>
+            <!-- &rarr; = → -->
+            <div id="upcoming" class="movie-grid"></div>
+        </section>
+    </main>
+
+    <footer class="page-footer">
+        <p>&copy; 2025 API-consumption assignment</p>
+        <!-- &copy; = © -->
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

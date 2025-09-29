@@ -22,9 +22,9 @@ html {
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: var(--fontMain);
   background: var(--colourBgWhite);
-  color: var(--text-color);
+  color: var(--colorBgBlac);
   margin: 0;
   line-height: 1.5;
 }
@@ -34,6 +34,7 @@ body {
   text-align: center;
   padding: var(--spacing-md);
   background-color: var(--colourBgHeader);
+  color: var(--colourBgWhite);
 }
 
 .page-title {
@@ -44,6 +45,8 @@ body {
 .page-content {
   padding: var(--spacing-md);
   background-color: var(--colourBgNav);
+  font-family: var(--fontTxt);
+  color:var(--colourBgWhite);
 }
 
 .section-title {

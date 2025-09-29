@@ -4,38 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie Explorer</title>
-    <link rel="stylesheet" href="style.css">
+    <title>The Movie Database</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/variables.css">
 </head>
 
 <body>
     <header class="page-header">
-        <h1 class="page-title">&#127909; Movie Explorer</h1>
-        <!-- &#127909; = 🎬 -->
+        <h1 class="page-title">The Movie Database</h1>
     </header>
 
     <main class="page-content">
         <section class="movie-section" aria-labelledby="now-playing-title">
-            <h2 id="now-playing-title" class="section-title">Now Playing &mdash; Latest in Cinemas</h2>
-            <!-- &mdash; = long dash -->
+            <h2 id="now-playing-title" class="section-title">Now Playing</h2>
             <div id="now-playing" class="movie-grid"></div>
         </section>
 
         <section class="movie-section" aria-labelledby="popular-title">
-            <h2 id="popular-title" class="section-title">Popular &ndash; Fan Favorites</h2>
-            <!-- &ndash; = short dash -->
+            <h2 id="popular-title" class="section-title">Popular</h2>
             <div id="popular" class="movie-grid"></div>
         </section>
 
         <section class="movie-section" aria-labelledby="top-rated-title">
-            <h2 id="top-rated-title" class="section-title">Top Rated &starf; All-Time Greats</h2>
-            <!-- &starf; = ★ -->
+            <h2 id="top-rated-title" class="section-title">Top Rated</h2>
             <div id="top-rated" class="movie-grid"></div>
         </section>
 
         <section class="movie-section" aria-labelledby="upcoming-title">
-            <h2 id="upcoming-title" class="section-title">Upcoming &rarr; Coming Soon</h2>
-            <!-- &rarr; = → -->
+            <h2 id="upcoming-title" class="section-title">Upcoming</h2>
             <div id="upcoming" class="movie-grid"></div>
         </section>
     </main>
@@ -45,7 +41,7 @@
         <!-- &copy; = © -->
     </footer>
 
-    <script src="script.js"></script>
+    <script src="javascript/script.js"></script>
 </body>
 
 </html>

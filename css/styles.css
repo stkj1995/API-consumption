@@ -1,9 +1,12 @@
-:root {
-  --background-color: #111;
-  --card-background: #222;
-  --text-color: #fff;
-  --highlight-color: #ffcc00;
+@import "variables.css";
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
   --spacing-sm: 1rem;
   --spacing-md: 2rem;
   --spacing-lg: 3rem;
@@ -15,12 +18,12 @@
 }
 
 html {
-  font-size: 62.5%; /* 1rem = 10px */
+  font-size: 62.5%;
 }
 
 body {
   font-family: Arial, sans-serif;
-  background: var(--background-color);
+  background: var(--colourBgWhite);
   color: var(--text-color);
   margin: 0;
   line-height: 1.5;
@@ -30,6 +33,7 @@ body {
 .page-footer {
   text-align: center;
   padding: var(--spacing-md);
+  background-color: var(--colourBgHeader);
 }
 
 .page-title {
@@ -39,6 +43,7 @@ body {
 
 .page-content {
   padding: var(--spacing-md);
+  background-color: var(--colourBgNav);
 }
 
 .section-title {
@@ -55,7 +60,7 @@ body {
 }
 
 .movie-card {
-  background: var(--card-background);
+  background: var(--colourBgWhite);
   border-radius: 1rem;
   overflow: hidden;
   text-align: center;
@@ -79,6 +84,8 @@ body {
 
 .movie-card p {
   font-size: var(--font-sm);
-  color: var(--highlight-color);
+  color: var(--colourBgWhite);
   margin: 0;
 }
+
+

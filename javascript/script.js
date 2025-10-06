@@ -25,9 +25,11 @@ function displayMovies(movies, containerId) {
   const container = document.getElementById(containerId);
   container.innerHTML = movies.slice(0, 3).map(movie => `
     <article class="movie-card">
-      <img src="${IMG_URL + movie.poster_path}" alt="${movie.title}">
       <div class="movie-info">
         <h3>${movie.title}</h3>
+      </div>
+      <img src="${IMG_URL + movie.poster_path}" alt="${movie.title}">
+      <div class="movie-info">
         <p>${movie.overview ? movie.overview.slice(0, 600) + "..." : "No description available."}</p>
         <p><strong>Original title:</strong> ${movie.original_title}</p>
         <p><strong>Release date:</strong> ${movie.release_date}</p>

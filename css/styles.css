@@ -25,13 +25,8 @@ body {
   font-family: var(--fontMain);
   background: var(--colourBgWhite);
   color: var(--colourBgBlack);
-  line-height: 1.4;
-}
-
-/* NAVIGATION */
-.main-nav {
-  background-color: var(--colourBgNav);
-  padding: 1rem;
+  margin: 0;
+  line-height: 1.2;
 }
 
 .main-nav ul {
@@ -39,24 +34,30 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 1rem;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav {
+  background-color: var(--colourBgNav);
+  padding: 1rem;
+  text-align: left;
 }
 
 .main-nav a {
-  color: var(--colourBgWhite);
   font-size: var(--font-md);
+  color: var(--colourBgWhite);
   text-decoration: none;
   font-weight: bold;
   border-bottom: 2px solid transparent;
   transition: all 0.2s ease-in-out;
 }
-
 .main-nav a:hover {
   color: var(--colourBgHover);
   border-bottom: 2px solid var(--colourBgHover);
 }
 
-/* HEADER & FOOTER */
 .page-header,
 .page-footer {
   text-align: center;
@@ -65,52 +66,61 @@ body {
   color: var(--colourBgWhite);
 }
 
-/* MAIN CONTENT */
+.page-title {
+  font-size: var(--font-xl);
+  margin: 0;
+}
+
 .page-content {
   padding: var(--spacing-md);
   background-color: var(--colourBgWhite);
   font-family: var(--fontTxt);
-  color: var(--colourBgBlack);
+  color: var(--colourBgWhite);
 }
 
-/* MOVIE GRID */
 .movie-grid {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  margin-bottom: var(--spacing-lg);
 }
 
-/* MOVIE CARD */
 .movie-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
   background-color: var(--colourBgWhite);
   border: 2px solid var(--colourBgPurple);
   border-radius: 0.8rem;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
+  color: var(--colourBgBlack);
+  font-family: var(--fontTxt);
+  text-align: center;
 }
 
-/* --- Movie title perfectly aligned --- */
-.movie-card h3 {
+.movie-card img {
+  width: 180px;
+  max-width: 320px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.movie-info {
+  width: 100%;
+  padding: 1rem;
+}
+
+.movie-info h3 {
   background-color: var(--colourBgPurple);
   color: var(--colourBgWhite);
   font-size: var(--font-lg);
   padding: 0.8rem 1rem;
-  text-align: center;
   width: 100%;
-  border-bottom: 2px solid var(--colourBgPurple);
-}
-
-/* Movie content */
-.movie-card img {
-  width: 180px;
-  height: auto;
-  object-fit: cover;
-  align-self: center;
-}
-
-.movie-info {
-  padding: 1.5rem;
+  text-align: center;
+  border-radius: 0.8rem 0.8rem 0 0;
+  margin-bottom: 1rem;
 }
 
 .movie-info p {
@@ -124,32 +134,42 @@ body {
   color: var(--colourBgBlack);
 }
 
-/* ---------- TABLET + DESKTOP ---------- */
 @media (min-width: 769px) {
-  .main-nav ul {
-    flex-direction: row;
-    justify-content: center;
+  .movie-grid {
+    align-items: flex-start;
+    flex-wrap: nowrap;
     gap: 2rem;
   }
 
   .movie-card {
-    flex-direction: row;
-    align-items: stretch;
+    flex: 1 1 calc(33.333% - 2rem);
+    max-width: calc(33.333% - 2rem);
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    text-align: left;
   }
 
   .movie-card img {
-    width: 180px;
-    height: 100%;
-    object-fit: cover;
+    width: 200px;
+    max-width: 100%;
+    border-radius: 0.8rem 0.8rem 0 0;
+    align-self: left;
   }
 
-  .movie-info {
-    flex: 1;
-    text-align: left;
+  .movie-info h3 {
+    border-radius: 0.8rem 0.8rem 0 0;
+    margin-bottom: 1rem;
   }
 
-  .movie-card h3 {
-    text-align: left;
-    padding-left: 1.5rem;
+   .main-nav ul {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
   }
+
+  .main-nav {
+    text-align: center;
+  }
+
 }

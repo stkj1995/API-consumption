@@ -68,7 +68,6 @@ body {
 
 .page-title {
   font-size: var(--font-xl);
-  margin: 0;
 }
 
 .page-content {
@@ -81,22 +80,23 @@ body {
 .movie-grid {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  margin-bottom: var(--spacing-lg);
 }
 
 .movie-card {
   width: 100%;
+  max-width: 430px;
+  margin: 0 auto var(--spacing-sm) auto; 
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   align-items: center;
   background-color: var(--colourBgWhite);
   border: 2px solid var(--colourBgPurple);
-  border-radius: 0.8rem;
+  border-radius: 1rem;
   overflow: hidden;
   color: var(--colourBgBlack);
   font-family: var(--fontTxt);
   text-align: center;
+  margin-top: 2rem;
 }
 
 .movie-card img {
@@ -104,12 +104,11 @@ body {
   max-width: 320px;
   height: auto;
   object-fit: cover;
-  border-radius: 0.5rem 0.5rem 0 0;
+  border-radius: 0 0 0.5rem 0.5rem;
 }
 
 .movie-info {
   width: 100%;
-  padding: 1rem;
 }
 
 .movie-info h3 {
@@ -118,7 +117,7 @@ body {
   font-size: var(--font-lg);
   padding: 0.8rem 1rem;
   width: 100%;
-  text-align: center;
+  text-align: left;
   border-radius: 0.8rem 0.8rem 0 0;
   margin-bottom: 1rem;
 }
@@ -128,15 +127,16 @@ body {
   color: var(--colourBgBlack);
   margin-bottom: 0.8rem;
   line-height: 1.5;
+  padding-left: 1rem;
+  text-align: left;
 }
 
 .movie-info strong {
   color: var(--colourBgBlack);
 }
 
-/* desktop */
+ /* desktop */
 @media (min-width: 769px) {
-
   .main-nav ul {
     flex-direction: row;
     justify-content: flex-start;
@@ -151,36 +151,44 @@ body {
 
   .movie-grid {
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
   }
 
   .movie-card {
-    display: flex; 
+    max-width: 1480px;
+    display: flex;
     flex-direction: column;
+    align-items: stretch;
+    text-align: left;
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+
+  .movie-content {
+    display: flex;
     align-items: flex-start;
     gap: 2rem;
-    width: 100%;
-    max-width: 100%;
-    border-radius: 0.8rem;
-    text-align: left;
+    padding: 0;
   }
 
   .movie-card img {
     width: 200px;
     height: auto;
-    border-radius: 0.8rem 0 0 0.8rem;
-    flex-shrink: 0; 
+    flex-shrink: 0;
+    border-radius: 0 0 0 0.5rem;
   }
 
   .movie-info {
-    flex: 1; 
-    padding: 1rem;
+    flex: 1;
   }
 
   .movie-info h3 {
     text-align: left;
+    margin-bottom: 0;
     border-radius: 0.8rem 0.8rem 0 0;
-    margin-bottom: 1rem;
+  }
+
+  .movie-info p {
+    padding-top: 0.5rem;
   }
 }
-

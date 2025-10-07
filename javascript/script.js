@@ -23,19 +23,25 @@ async function getMovies() {
 
 function displayMovies(movies, containerId) {
   const container = document.getElementById(containerId);
-  container.innerHTML = movies.slice(0, 3).map(movie => `
-    <article class="movie-card">
-      <div class="movie-info">
-        <h3>${movie.title}</h3>
-      </div>
-      <img src="${IMG_URL + movie.poster_path}" alt="${movie.title}">
-      <div class="movie-info">
-        <p>${movie.overview ? movie.overview.slice(0, 600) + "..." : "No description available."}</p>
-        <p><strong>Original title:</strong> ${movie.original_title}</p>
-        <p><strong>Release date:</strong> ${movie.release_date}</p>
-      </div>
-    </article>
-  `).join("");
+  const template = document.getElementById("movie-template");
+  const fragment = document.createDocumentFragment();
+
+  movies.slice(0, 3).forEach(movie => {
+    const clone = template.content.cloneNode(true);
+
+    clone.querySelector(".movie-title").textContent = movie.title;
+    clone.querySelector(".movie-poster").src = IMG_URL + movie.poster_path;
+    clone.querySelector(".movie-poster").alt = movie.title;
+    clone.querySelector(".movie-overview").textContent =
+      movie.overview || "No description available.";
+    clone.querySelector(".movie-original").textContent = movie.original_title;
+    clone.querySelector(".movie-release").textContent = movie.release_date;
+
+    fragment.appendChild(clone);
+  });
+
+  container.innerHTML = ""; 
+  container.appendChild(fragment);
 }
 
 async function init() {

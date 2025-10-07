@@ -24,27 +24,30 @@
         </ul>
     </nav>
 
-    <main class="page-content">
-        <section class="movie-section" aria-labelledby="now-playing-title">
-            <h2 id="now-playing-title" class="section-title">Now Playing</h2>
-            <div id="now-playing" class="movie-grid"></div>
-        </section>
+    <main>
+        <section id="now-playing" class="movie-grid"></section>
+        <section id="popular" class="movie-grid"></section>
+        <section id="top-rated" class="movie-grid"></section>
+        <section id="upcoming" class="movie-grid"></section>
 
-        <section class="movie-section" aria-labelledby="popular-title">
-            <h2 id="popular-title" class="section-title">Popular</h2>
-            <div id="popular" class="movie-grid"></div>
-        </section>
-
-        <section class="movie-section" aria-labelledby="top-rated-title">
-            <h2 id="top-rated-title" class="section-title">Top Rated</h2>
-            <div id="top-rated" class="movie-grid"></div>
-        </section>
-
-        <section class="movie-section" aria-labelledby="upcoming-title">
-            <h2 id="upcoming-title" class="section-title">Upcoming</h2>
-            <div id="upcoming" class="movie-grid"></div>
-        </section>
     </main>
+
+    <template id="movie-template">
+        <article class="movie-card">
+            <div class="movie-info">
+                <h3 class="movie-title"></h3>
+            </div>
+            <div class="movie-content">
+                <img class="movie-poster" alt="">
+                <div class="movie-info">
+                    <p class="movie-overview"></p>
+                    <p><strong>Original title:</strong> <span class="movie-original"></span></p>
+                    <p><strong>Release date:</strong> <span class="movie-release"></span></p>
+                </div>
+            </div>
+        </article>
+    </template>
+
 
     <footer class="page-footer">
         <p>&copy; 2025 API-consumption assignment - Sophie Teinvig Kjer</p>
